@@ -1,0 +1,16 @@
+application: haku-backend
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /.*
+  script: Dispatcher.application
+
+libraries:
+- name: webapp2
+  version: latest
+
+builtins:
+- remote_api: on
